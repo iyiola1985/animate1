@@ -108,7 +108,7 @@ export default function Hero() {
             <button
               key={label}
               type="button"
-              className={`${pillClassName} border border-black/10 bg-white text-black hover:bg-black hover:text-white`}
+              className={`${pillClassName} border border-black/10 bg-white font-normal text-black [font-family:var(--font-heading)] hover:bg-black hover:text-white`}
             >
               {label}
             </button>
@@ -116,7 +116,7 @@ export default function Hero() {
           <button
             type="button"
             onClick={copyEmail}
-            className={`${pillClassName} gap-2 border border-white bg-transparent text-white hover:bg-white hover:text-black sm:gap-3`}
+            className={`${pillClassName} gap-2 border border-white bg-transparent font-normal text-white [font-family:var(--font-heading)] hover:bg-white hover:text-black sm:gap-3`}
           >
             <span>
               Reach us:{' '}
