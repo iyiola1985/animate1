@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const NAV_LINKS = ['Labs', 'Studio', 'Openings', 'Shop'] as const
+const NAV_LINKS = ['Worlds', 'Cast', 'Episodes', 'Shop'] as const
 
 const linkClassName = 'transition-opacity hover:opacity-60'
 
@@ -32,13 +32,13 @@ export default function Navbar() {
       <header className="fixed inset-x-0 top-0 z-10 flex items-center justify-between gap-3 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-4 sm:px-8 sm:pb-5">
         <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <span
-            className="min-w-0 truncate text-[clamp(15px,4.2vw,26px)] font-normal text-white [font-family:var(--font-heading)]"
+            className="min-w-0 truncate text-[clamp(18px,3.2vw,28px)] font-normal text-white [font-family:var(--font-heading)]"
           >
-            sholatech networking
+            sholatech toons
           </span>
           <span
             aria-hidden="true"
-            className="shrink-0 select-none text-[clamp(18px,5.5vw,30px)] text-white"
+            className="shrink-0 select-none text-[clamp(20px,3.6vw,32px)] text-white"
             style={{ letterSpacing: '-0.02em' }}
           >
             ✳︎
@@ -46,7 +46,7 @@ export default function Navbar() {
         </div>
 
         <nav
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center text-[23px] text-white xl:flex"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center text-[22px] text-white xl:flex"
           aria-label="Primary"
         >
           {NAV_LINKS.map((label, index) => (
@@ -60,10 +60,10 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="mailto:hello@mainframe.co"
-          className="hidden shrink-0 text-[23px] text-white underline underline-offset-2 transition-opacity hover:opacity-60 xl:inline"
+          href="mailto:iyiolaolusolatech@gmail.com"
+          className="hidden shrink-0 text-[22px] text-white underline underline-offset-2 transition-opacity hover:opacity-60 xl:inline"
         >
-          Get in touch
+          Draw with us
         </a>
 
         <button
@@ -111,11 +111,11 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="mailto:hello@mainframe.co"
+          href="mailto:iyiolaolusolatech@gmail.com"
           className="text-[32px] font-medium text-white underline underline-offset-2 transition-opacity hover:opacity-60"
           onClick={() => setOpen(false)}
         >
-          Get in touch
+          Draw with us
         </a>
       </div>
     </>

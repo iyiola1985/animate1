@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react'
 import { useTypewriter } from '../hooks/useTypewriter.ts'
 
 const TYPEWRITER_TEXT =
-  'Glad you stopped in. Good taste tends to find us. Now, what are we building?'
+  'Loud color, jumpy characters, and a story you can click through. Which toon should we draw?'
 
 const ACTIONS = [
-  'Pitch us an idea',
-  'Come work here',
-  'Send a brief hello',
-  'See how we operate',
+  'Sketch a toon',
+  'Meet the cast',
+  'Send a doodle',
+  'See it move',
 ] as const
 
 const SITE = 'sholatech.com'
 const SITE_URL = 'https://sholatech.com'
 
 const pillClassName =
-  'mx-[0.2em] mb-[0.4em] inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-[0.3em] text-[13px] transition-colors duration-200 sm:px-5 sm:text-[15px]'
+  'mx-[0.2em] mb-[0.4em] inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-[0.35em] text-[14px] transition-colors duration-200 sm:px-5 sm:text-[16px]'
 
 export default function Hero() {
   const { displayed, done } = useTypewriter(TYPEWRITER_TEXT)
@@ -28,28 +28,27 @@ export default function Hero() {
 
   return (
     <section className="hero-section relative z-[1] flex min-h-dvh flex-col justify-end overflow-x-hidden px-5 pt-[max(6rem,calc(env(safe-area-inset-top)+4.5rem))] pb-[max(3rem,env(safe-area-inset-bottom))] sm:px-8 md:px-10">
-      <div className="relative z-10 max-w-xl">
+      <div className="relative z-10 max-w-2xl">
         <p
-          className="pointer-events-none mb-5 select-none text-white sm:mb-6"
+          className="pointer-events-none mb-3 select-none text-white [font-family:var(--font-heading)] sm:mb-4"
           style={{
-            fontSize: 'clamp(18px, 4vw, 26px)',
-            lineHeight: 1.3,
+            fontSize: 'clamp(28px, 4vw, 44px)',
+            lineHeight: 1.05,
             fontWeight: 400,
-            filter: 'blur(4px)',
           }}
         >
-          Hey there, meet A.R.I.A,
+          A cartoon site,
           <br />
-          Mainframe's Adaptive Response Interface Agent
+          drawn extra large.
         </p>
 
         <p
-          className="mb-5 text-white sm:mb-6"
+          className="mb-4 max-w-xl text-white sm:mb-5"
           style={{
-            fontSize: 'clamp(18px, 4vw, 26px)',
-            lineHeight: 1.35,
+            fontSize: 'clamp(16px, 2vw, 22px)',
+            lineHeight: 1.3,
             fontWeight: 400,
-            minHeight: 54,
+            minHeight: '2.6em',
           }}
           aria-label={TYPEWRITER_TEXT}
         >
@@ -84,7 +83,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className={`${pillClassName} border border-white bg-transparent font-normal text-white [font-family:var(--font-heading)] hover:bg-white hover:text-black`}
           >
-            Reach us:{' '}
+            Pop in:{' '}
             <span className="underline underline-offset-1">{SITE}</span>
           </a>
         </div>
